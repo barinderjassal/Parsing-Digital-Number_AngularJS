@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    	<title>Parsed Digital Numbers</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	</head>
+
+<body ng-app="numberApp" ng-controller="numberController">
+     <div>
+        <div class="container well">
+            <div class="col-md-4 col-xs-12">
+                <input type="file" read-file input-from-file="inputFromFile" output-to-file="output">
+                </br>                
+                <div ng-show="output">
+                    <hr>
+                    <h2>Please download the file from here.</h2>
+                    <input class="btn btn-primary" type="button" ng-click="download()" value="Download">
+                </div>
+            </div>
+            <div class="row col-md-6 col-xs-12"> 
+                <pre ng-bind="inputFromFile"></pre> 
+            </div>
+        </div>
+    </div>
+    
+</body>
+	<script src="js/libraries/angular-1.5.6.min.js"></script>
+	<script src="js/libraries/angular-file-saver.bundle.min.js"></script>
+	<script src="js/app/module.js"></script>
+	<script src="js/directives/readFile.js"></script>
+	<script src="js/factories/ParseNumberFactory.js"></script>
+
+</html>
